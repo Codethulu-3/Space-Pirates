@@ -8,6 +8,7 @@ import java.awt.Graphics;
  */
 public class Game {
     
+    public static int tilesize=32;
     
     public void tick(){
         
