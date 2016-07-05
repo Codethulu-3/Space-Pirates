@@ -22,6 +22,7 @@ public class Main extends Canvas implements Runnable {
     private Game game;
     
     public void init(){
+        this.addKeyListener(new KeyManager());
         game = new Game();
     }
     
