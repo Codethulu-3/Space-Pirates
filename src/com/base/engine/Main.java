@@ -1,5 +1,6 @@
 package com.base.engine;
 
+import com.base.game.Game;
 import java.awt.Canvas;
 import java.awt.Graphics;
 import java.awt.Toolkit;
@@ -7,7 +8,10 @@ import java.awt.image.BufferStrategy;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
-
+/**
+ *
+ * @author Alex
+ */
 public class Main extends Canvas implements Runnable {
     
     public static int width = 200, height = 200, scale = 2, tilesize = 16, height2=175, width2=175;
@@ -15,8 +19,10 @@ public class Main extends Canvas implements Runnable {
     public boolean attack=false, look=false;
     public Thread gameThread;
     private BufferStrategy get;
+    private Game game;
+    
     public void init(){
-        
+        game = new Game();
     }
     
     public synchronized void start(){
@@ -56,6 +62,7 @@ public class Main extends Canvas implements Runnable {
     }
     
     public void tick(){
+        game.tick();
         
     }
     
@@ -69,7 +76,8 @@ public class Main extends Canvas implements Runnable {
         //Render
         
         g.fillRect(0, 0, width, height);
-        
+        game.render(g);
+          
         //End rendering
         g.dispose();  
         bs.show();
