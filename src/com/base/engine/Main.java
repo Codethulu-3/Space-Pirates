@@ -9,10 +9,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
 /**
- *
+ * Background processes such as tick, and render
  * @author Alex
  */
-public class Main extends Canvas implements Runnable {
+public final class Main extends Canvas implements Runnable {
     
     public static int width, height;
     public static boolean running = false;
@@ -75,12 +75,10 @@ public class Main extends Canvas implements Runnable {
         return;
         }
         Graphics g = bs.getDrawGraphics();
-        //Render
         
         g.fillRect(0, 0, width, height);
         game.render(g);
           
-        //End rendering
         g.dispose();  
         bs.show();
     }

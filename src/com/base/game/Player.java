@@ -3,7 +3,7 @@ package com.base.game;
 import java.awt.Graphics;
 
 /**
- *
+ * Player class, handles all user input outside of key manager
  * @author Alex
  */
 public class Player {

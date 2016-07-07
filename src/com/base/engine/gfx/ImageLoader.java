@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
- *
+ * Loads Images for other graphics classes
  * @author Alex
  */
 public class ImageLoader {

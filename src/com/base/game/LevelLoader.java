@@ -1,12 +1,10 @@
-package com.base.engine;
+package com.base.game;
 
-import com.base.game.Game;
 import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
 /**
- *
+ * Class to load levels in, handles layout and tile replacements
  * @author Alex
  */
 public final class LevelLoader {
@@ -48,5 +46,26 @@ public final class LevelLoader {
                 }
             }
         }   
+    }
+    public tile getTile(int x, int y){
+        if(x < 0 || y < 0 || x >= w || y >= h){
+            return tile.Void;
+        }
+        switch(tiles[x][y]){
+            case 1:
+                return tile.water;
+            case 2:
+                return tile.StoneWall;
+            case 3:
+                return tile.dirt;
+            case 4:
+                return tile.dirt;
+            case 5:
+                return tile.Void;
+            case 6:
+                return tile.dirt;
+            default:          
+                return tile.StoneWall;
+        }
     }
 }
