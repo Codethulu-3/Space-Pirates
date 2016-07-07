@@ -1,5 +1,6 @@
 package com.base.game;
 
+import com.base.engine.Main;
 import java.awt.Graphics;
 
 /**
@@ -8,7 +9,8 @@ import java.awt.Graphics;
  */
 public class Game {
     
-    public static int tilesize=32;
+    public static int tilesize = 32, scale = 1;
+    public static int width = Main.width, height = Main.height;
     private Player player;
     
     public void init(){

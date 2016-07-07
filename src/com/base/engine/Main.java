@@ -14,7 +14,7 @@ import javax.swing.JFrame;
  */
 public class Main extends Canvas implements Runnable {
     
-    public static int width = 200, height = 200, scale = 2, tilesize = 16, height2=175, width2=175;
+    public static int width, height;
     public static boolean running = false;
     public boolean attack=false, look=false;
     public Thread gameThread;
